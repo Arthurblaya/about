@@ -1,9 +1,19 @@
 export default function Home() {
   return (
     <main className="mw--xl c--c">
-      <h1>About me</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium exercitationem corporis in quaerat possimus atque consequuntur, ullam mollitia voluptates magnam tempore recusandae dicta, quam, deleniti quidem sunt fuga reprehenderit dolores?
-      Ullam dolorem veritatis odio impedit beatae possimus, ab voluptate officiis eos earum nostrum ea rerum quis quaerat eum blanditiis asperiores inventore voluptatum, excepturi optio maiores facere et est nemo! Ad!</p>
+      <h1>Artur Blaya</h1>
+      <div className="c">
+        <p>
+          I'm an ICT Systems Engineer with expertise in programming,
+          project management, database administration, system
+          design, infrastructure, hardware description, and
+          communication systems. With experience as an IT consultant and full-stack
+          software developer, I excel in efficiently solving
+          technological challenges from conception to
+          implementation. My versatility and constant
+          enthusiasm allow me to easily adapt to new challenges.
+        </p>
+      </div>
     </main>
   )
 }
