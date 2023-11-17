@@ -1,0 +1,129 @@
+/*
+The tags below has the following inherit properties, meaning that the correct way of setting them, 
+is to set it in parent tag:
+<a> - color, font-size
+<h1>,<h2>,<h3>,<h4>,<h5>,<h6>,<p>,<span>,<a>,<strong>,<blockquote>,<i>,<b>,<u>,<em> - color, font-weight, font-style
+<form>,<input>,<textarea>,<select>,<button>,<label> - color, font-family, font-size
+*/
+
+/* Reset All Margins And Paddings */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline; // For Images In Text 
+}
+
+/* Images Size Related Problems */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%; // Images Will never be bigger than the screen
+  // width: 100%; // Images will always fit the tag, so we will just have to adjut that width
+  // display: block; // Some problem related to inline block
+  object-fit: cover; // In case of sizing image with height
+  // object-position: center center; // In case of sizing image with height
+}
+
+/* Nowadays <a> is Always Used As Block */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* Except <a> Inside <p> */
+p a {
+  display: inline;
+}
+
+/* Remove <li> Dots and Numbers */
+li {
+  list-style-type: none;
+}
+
+/* Smother Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove Default Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit; // Using inherit to be able to configure this properties from the container style
+  font-style: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Avoid Pseudo Elements Problems*/
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* Common Form Child Elements and Buttons Problems */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit; // See line 63
+  font-size: inherit;
+  hyphens: auto; // !Break Line 
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  appearance: none; // Remove Browswer Defaults
+}
+
+/* Reset Table */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Avoid SVG Problems */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Font and Other Body Options */
+body {
+  min-height: 100vh;
+  font-size: 100%; // Accepts User's Browser Font Size Configuration
+  /* Recommended */
+  line-height: 1.4em;
+  /* Recommended */
+  font-smooth: always;
+  /* Recommended */
+  -webkit-font-smoothing: antialiased;
+  /* Recommended */
+  -moz-osx-font-smoothing: grayscale;
+}

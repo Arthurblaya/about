@@ -1,0 +1,116 @@
+// hierarchy
+@mixin font($Size: 0, $Weight: 0) {
+  $Weights: (map-get($weights, w0),
+    map-get($weights, w1),
+    map-get($weights, w2));
+  $Sizes: (map-get($sizes, s0),
+    map-get($sizes, s1),
+    map-get($sizes, s2_sm));
+  font-size: nth($Sizes, $Size +1);
+  @if $Size ==2 {
+    @include sm {
+      font-size: map-get($sizes, s2);
+    }
+  }
+  line-height: 1.618033988749894em;
+  font-weight: nth($Weights, $Weight +1);
+}
+
+
+// Flexbox
+@mixin flex-row($x: stretch, $y: stretch, $w: nowrap, $gap: var(--gap)) {
+  display: flex;
+  flex-flow: row $w;
+  align-items: $y;
+  justify-content: $x;
+  gap: $gap;
+}
+
+@mixin flex-col($x: stretch, $y: stretch, $w: nowrap, $gap: var(--gap)) {
+  display: flex;
+  flex-flow: column $w;
+  align-items: $x;
+  justify-content: $y;
+  gap: $gap;
+}
+
+
+// Positive  Media Queries -> Mobile First
+@mixin xsm {
+  @media (min-width: map-get($breakpoints, xsm)) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: map-get($breakpoints, sm)) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: map-get($breakpoints, md)) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: map-get($breakpoints, lg)) {
+    @content;
+  }
+}
+
+
+@mixin xl {
+  @media (min-width: map-get($breakpoints, xl)) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: map-get($breakpoints, xxl)) {
+    @content;
+  }
+}
+
+
+// Negative Media Queries -> Computer First
+@mixin n-xsm {
+  @media (max-width: map-get($breakpoints, xsm)) {
+    @content;
+  }
+}
+
+@mixin n-sm {
+  @media (max-width: map-get($breakpoints, sm)) {
+    @content;
+  }
+}
+
+@mixin n-md {
+  @media (max-width: map-get($breakpoints, md)) {
+    @content;
+  }
+}
+
+@mixin n-lg {
+  @media (max-width: map-get($breakpoints, lg)) {
+    @content;
+  }
+}
+
+
+@mixin n-xl {
+  @media (max-width: map-get($breakpoints, xl)) {
+    @content;
+  }
+}
+
+@mixin n-xxl {
+  @media (max-width: map-get($breakpoints, xxl)) {
+    @content;
+  }
+}
+
+
+

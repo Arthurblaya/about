@@ -1,0 +1,153 @@
+html,
+body {
+  caret-color: transparent;
+  @include font(0, 0);
+  font-size: 1em;
+}
+
+h1 {
+  @include font(2, 2);
+}
+
+h2 {
+  @include font(1, 1);
+}
+
+p {
+  @include font(0, 0);
+}
+
+strong {
+  @include font(0, 2);
+}
+
+a {
+  font-size: 1em;
+  cursor: pointer;  
+}
+
+header {
+  @include font(0, 2);
+  padding: 0 var(--gap);
+  min-height: var(--header-height);
+  @include flex-row($y: center);
+  border-radius: 0;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  a {
+    font-size: 2em;
+  }
+
+}
+
+main {
+  min-height: var(--content-height);
+  padding: var(--gap);
+}
+
+footer {
+  @include flex-row($y: center);
+  min-height: var(--footer-height);
+  @include font(0, 0);
+  padding: 0 var(--gap);
+  border-radius: 0;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+
+button {  
+  border-radius: var(--border-radius);
+  @include font(0, 2);
+  cursor: pointer;
+  padding: 0 ($golden-k - 1)/2 * 1em; // Golden Rule
+}
+
+label {
+  @include font(0, 2);
+}
+
+input {
+  border-color: var(--color-2);
+  @include font(0, 0);
+  caret-color: auto;
+  border-radius: var(--border-radius);
+  width: 100%;
+  cursor: text;
+  padding: 0 ($golden-k - 1)/2 * 1em; // Golden Rule
+  border-style: solid;
+  border-width: 0.2em;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  border-radius: var(--border-radius);
+  @include font(0, 0);
+  width: 100%;
+  caret-color: auto;
+  cursor: text;
+  padding: ($golden-k - 1)/2 * 1em; // Golden Rule
+  border-color: var(--color-2);
+  border-style: solid;
+  border-width: 0.2em;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+select {
+  border-radius: var(--border-radius);
+  @include font(1, 0);
+  width: 100%;
+  caret-color: auto;
+  cursor: pointer;
+  padding: 0 ($golden-k - 1)/2 * 1em; // Golden Rule
+  color: var(--color-1);
+  border-style: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+option {
+  @include font(0, 1);
+
+  &:checked {
+    display: none;
+  }
+}
+
+hr {
+  border: none;
+  height: 0.1em;
+  background-color: var(--color-1);
+  margin: var(--gap) 0;
+}
+
+section {
+  padding: 1em;
+  border-radius: var(--border-radius);
+}
+
+b {
+  @include font(0, 2);
+}
+
+
+::placeholder {
+  color: var(--color-grey);
+}
+
+
+img {
+  border-radius: var(--border-radius);
+}
