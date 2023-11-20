@@ -87,7 +87,10 @@
     @include flex-row(space-between, center);
   }
 
-
+  &--a {
+    @include flex-row(space-around, center);
+  }
+  
 }
 
 // wrap
@@ -115,8 +118,6 @@
 .gd--c2 {
   flex: 1 1 38.1966011%;
 }
-
-
 
 // Padding 
 .pg {

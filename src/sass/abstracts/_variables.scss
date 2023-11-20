@@ -11,8 +11,8 @@ $breakpoints: (
 // Font Weights - map-get($weights, w0)
 $weights: (
   w0: 400,
-  w1: 500,
-  w2: 700
+  w1: 600,
+  w2: 800
 );
 
 // Golden K
@@ -21,6 +21,6 @@ $golden-k: 1.618033988749894;
 // Font Sizes - map-get($sizes, s0)
 $sizes: (
   s0: 1rem,
-  s1: 1rem * $golden-k,
+  s1: 1rem * $golden-k * $golden-k,
   s2_sm: 1rem * $golden-k * $golden-k * $golden-k,
   s2: 1rem * $golden-k * $golden-k * $golden-k * $golden-k)

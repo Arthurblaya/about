@@ -2,7 +2,8 @@ html,
 body {
   caret-color: transparent;
   @include font(0, 0);
-  font-size: 1em;
+  color: var(--color-1);
+  font-size: 1rem;
 }
 
 h1 {
@@ -34,14 +35,10 @@ header {
   border-radius: 0;
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
-  position: sticky;
-  top: 0;
-  z-index: 100;
 
   a {
     font-size: 1.5em;
   }
-
 }
 
 main {
@@ -63,6 +60,8 @@ footer {
 button {  
   border-radius: var(--border-radius);
   @include font(0, 2);
+  background-color: var(--color-1);
+  color: var(--color-0);
   cursor: pointer;
   padding: 0 ($golden-k - 1)/2 * 1em; // Golden Rule
 }
@@ -80,7 +79,7 @@ input {
   cursor: text;
   padding: 0 ($golden-k - 1)/2 * 1em; // Golden Rule
   border-style: solid;
-  border-width: 0.2em;
+  border-width: 0.1em;
 
   &:focus {
     outline: none;
@@ -88,6 +87,7 @@ input {
 }
 
 textarea {
+  resize: vertical; 
   border-radius: var(--border-radius);
   @include font(0, 0);
   width: 100%;
@@ -96,7 +96,7 @@ textarea {
   padding: ($golden-k - 1)/2 * 1em; // Golden Rule
   border-color: var(--color-2);
   border-style: solid;
-  border-width: 0.2em;
+  border-width: 0.1em;
 
   &:focus {
     outline: none;
