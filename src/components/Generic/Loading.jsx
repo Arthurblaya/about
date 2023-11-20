@@ -20,8 +20,8 @@ function Loading({ loading }) {
           strokeWidth="5"
           animationDuration="0.75"
           visible={loading}
-          width={50} 
-          height={50}
+          width={`${1}em`}
+          height={`${1}em`}
         />
       }
   </>)

@@ -27,10 +27,7 @@ export default function Home() {
         </p>
       </section>
 
-      <ContactMe/>
-
-
-
+      {/* <ContactMe/> */}
     </main>
   )
 }

@@ -10,13 +10,13 @@ const transporter = nodemailer.createTransport({
   }
 })
 
-export async function sendEmail(email_to, subject, html) {
+export async function sendEmail(email_to, subject, text) {
   try {
     const info = await transporter.sendMail({
       from: `"About Page" <${process.env.NODEMAILER_MAIL}>`,
       to: email_to,
       subject,
-      html,
+      text,
     })
   } catch (error) {
     throw new Error(`Error at sending the email: ${error.message}`)
