@@ -1,6 +1,4 @@
-import ContactMe from "@/components/Home/ContactMe";
 import Image from "next/image";
-
 
 export default function Home() {
 
@@ -45,7 +43,6 @@ export default function Home() {
       </section>
 
       <button>
-
         <a href={`mailto:${mailTo}?subject=${encodeURI(subject)}&body=${encodeURI(body)}`}>Contact me</a>
       </button>
 
