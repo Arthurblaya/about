@@ -8,7 +8,7 @@
     map-get($sizes, s2_sm));
   font-size: nth($Sizes, $Size +1);
   @if $Size ==2 {
-    @include sm {
+    @include md {
       font-size: map-get($sizes, s2);
     }
   }
